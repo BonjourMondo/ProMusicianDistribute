@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.promusician.mapper.MusicMapper">
+    <insert id="saveMusic" parameterType="GalleryDTO" useGeneratedKeys="true">
+        INSERT INTO gallery(title,description,file_url,img_url) VALUES (#{title},#{description},#{file_url},#{img_url})
+    </insert>
+</mapper>

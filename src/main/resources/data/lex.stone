@@ -1,0 +1,16 @@
+bpm=60
+times=10
+i=10
+while times>0{
+ 	 if i%2==0{
+     		   rhy{cr;hi;ki}
+     	 }else{
+     	 //"sn"|"fl"|"hi"|"bi"|"sm"|"ki"|"cr"
+     		   rhy{sn;sm;fl;bi}
+     	 }
+     if i==10{
+     rhy{cr;}
+     }
+     	 i=i+1
+     	 times=times-1;
+}

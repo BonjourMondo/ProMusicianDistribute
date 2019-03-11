@@ -1,0 +1,42 @@
+
+.probutton a {
+    display: inline-block;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0;
+    font-weight: 700;
+    background: #fecc2f;
+    padding: 2px 2px;
+    margin-top: 2px;
+    margin-left: 35px;
+    margin-bottom: 2px;
+    height:50px;
+    width: 100%;
+    border: 2px solid #453cad;
+    text-align: center;
+}
+
+.probutton a:hover {
+    background-color: #fff;
+    color: #000;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.textHint{
+    user-select: none;
+    overflow: scroll;
+}
+
+.textHint img{
+    width: 10%;
+}
+.textHint img:hover{
+    background-color: #fecc2f;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+
+
+
