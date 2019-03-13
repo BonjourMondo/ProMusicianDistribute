@@ -22,8 +22,7 @@ public class GalleryServiceImpl implements GalleryService{
     GalleryShowMapper galleryShowMapper;
 
     @Override
-//    必须要打开虚拟机 才能使用cacheable
-//    @Cacheable("MusicAllSelect")
+    @Cacheable("MusicAllSelect")
     public List<GalleryDTO> showGallery(){
         List<GalleryDTO> galleryDTOList= galleryShowMapper.selectAllMusic();
         return galleryDTOList;

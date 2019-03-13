@@ -26,7 +26,7 @@ public class RedisConfig {
         jedisPoolConfig.setMaxIdle(300);
         jedisPoolConfig.setTestOnBorrow(true);
         JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(jedisPoolConfig);
-        jedisConnectionFactory.setHostName("192.168.235.131");
+        jedisConnectionFactory.setHostName("47.100.199.15");
         jedisConnectionFactory.setPort(6379);
         jedisConnectionFactory.setPassword("woshixiao");
         jedisConnectionFactory.setUsePool(true);

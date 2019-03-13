@@ -13,7 +13,7 @@ public class CommitDatebseServiceImpl implements CommitDatebaseService {
     private MusicMapper musicMapper;
 
     @Override
-//    @Cacheable("MusicSelect")
+    @Cacheable("MusicSelect")
     public void saveMusic(GalleryDTO music){
         musicMapper.saveMusic(music);
     }
