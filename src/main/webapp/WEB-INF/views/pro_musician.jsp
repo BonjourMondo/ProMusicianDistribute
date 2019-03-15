@@ -410,9 +410,9 @@
             v.innerHTML="<span class=\"span_lineNo\" id=\"1\">1&nbsp;&nbsp;&nbsp;&nbsp;</span>bpm:Express rhythmic speed.&nbsp;&nbsp; <button class=\"bpm_btn bpm_btn-tooltip btn-sequencer\" id=\"sequencer-visible-btn\" aria-label=\"BPM\"><i class=\"fa fa-th\"></i></button>&nbsp;<span class=\"span_KeyofBPM span_text_hover\">BPM&nbsp;</span>;<br>\n" +
                 "                            <span class=\"span_lineNo\" id=\"2\">2&nbsp;&nbsp;&nbsp;&nbsp;</span>times:Represents the number of hits.(you could never end it)&nbsp;&nbsp;<span class=\"span_KeyofTimes span_text_hover\">TIMES&nbsp;</span>;<br>\n" +
                 "                            <span class=\"span_lineNo\" id=\"3\">3&nbsp;&nbsp;&nbsp;&nbsp;</span>if/elese,while:Same as java or other language can do&nbsp;&nbsp;<span class=\"span_KeyofIFELSE span_text_hover\">IF&nbsp;</span>;<span class=\"span_KeyofIFELSE span_text_hover\">ELSE&nbsp;</span>;<span class=\"span_KeyofWhile span_text_hover\">WHILE&nbsp;</span>;<br>\n" +
-                "                            <span class=\"span_lineNo\" id=\"4\">3&nbsp;&nbsp;&nbsp;&nbsp;</span>rhy:Represent a beat.(short for rhythm)&nbsp;&nbsp;<span class=\"span_KeyofRHY span_text_hover\">RHY&nbsp;</span><br/>\n" +
-                "                            <span class=\"span_lineNo\" id=\"5\">4&nbsp;&nbsp;&nbsp;&nbsp;</span>sn:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/snare.png\" onclick=\"img_snare();\">;&nbsp;fl:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/floor_tom.png\" onclick=\"img_floorTom();\">;&nbsp;hi:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/hi_hat.png\" onclick=\"img_hihat();\">;&nbsp;bi:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/left_tom.png\" onclick=\"img_leftTom();\">;&nbsp;sm:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/right_tom.png\" onclick=\"img_rightTom();\">;&nbsp;ki:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/kick.png\" onclick=\"img_kick();\">;&nbsp;cr:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/crash.png\" onclick=\"img_crash();\"><br>\n" +
-                "                      ";
+                "                            <span class=\"span_lineNo\" id=\"4\">4&nbsp;&nbsp;&nbsp;&nbsp;</span>rhy:Represent a beat.(short for rhythm)&nbsp;&nbsp;<span class=\"span_KeyofRHY span_text_hover\">RHY&nbsp;</span><br/>\n" +
+                "                            <span class=\"span_lineNo\" id=\"5\">5&nbsp;&nbsp;&nbsp;&nbsp;</span>sn:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/snare.png\" onclick=\"img_snare();\">;&nbsp;fl:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/floor_tom.png\" onclick=\"img_floorTom();\">;&nbsp;hi:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/hi_hat.png\" onclick=\"img_hihat();\">;&nbsp;bi:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/left_tom.png\" onclick=\"img_leftTom();\">;&nbsp;sm:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/right_tom.png\" onclick=\"img_rightTom();\">;&nbsp;ki:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/kick.png\" onclick=\"img_kick();\">;&nbsp;cr:<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/crash.png\" onclick=\"img_crash();\"><br>\n" +
+                "                      <span class=\"span_lineNo\" id=\"6\">6&nbsp;&nbsp;&nbsp;&nbsp;</span>also you can use the word \"hop\" to skip a beat.&nbsp;&nbsp; the symbol just like<img class=\"\" style=\"height: 30px;width: 30px\" src=\"<%=request.getContextPath()%>/assets/images/proimage/hop.png\"><br/>";
         }
     </script>
 </head>
@@ -493,8 +493,9 @@
                             <span class="span_lineNo" id="1">1&nbsp;&nbsp;&nbsp;&nbsp;</span>bpm:Express rhythmic speed.&nbsp;&nbsp; <button class="bpm_btn bpm_btn-tooltip btn-sequencer" id="sequencer-visible-btn" aria-label="BPM"><i class="fa fa-th"></i></button>&nbsp;<span class="span_KeyofBPM span_text_hover">BPM&nbsp;</span>;<br>
                             <span class="span_lineNo" id="2">2&nbsp;&nbsp;&nbsp;&nbsp;</span>times:Represents the number of hits.(you could never end it)&nbsp;&nbsp;<span class="span_KeyofTimes span_text_hover">TIMES&nbsp;</span>;<br>
                             <span class="span_lineNo" id="3">3&nbsp;&nbsp;&nbsp;&nbsp;</span>if/elese,while:Same as java or other language can do&nbsp;&nbsp;<span class="span_KeyofIFELSE span_text_hover">IF&nbsp;</span>;<span class="span_KeyofIFELSE span_text_hover">ELSE&nbsp;</span>;<span class="span_KeyofWhile span_text_hover">WHILE&nbsp;</span>;<br>
-                            <span class="span_lineNo" id="4">3&nbsp;&nbsp;&nbsp;&nbsp;</span>rhy:Represent a beat.(short for rhythm)&nbsp;&nbsp;<span class="span_KeyofRHY span_text_hover">RHY&nbsp;</span><br/>
-                            <span class="span_lineNo" id="5">4&nbsp;&nbsp;&nbsp;&nbsp;</span>sn:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/snare.png" onclick="img_snare();">;&nbsp;fl:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/floor_tom.png" onclick="img_floorTom();">;&nbsp;hi:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/hi_hat.png" onclick="img_hihat();">;&nbsp;bi:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/left_tom.png" onclick="img_leftTom();">;&nbsp;sm:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/right_tom.png" onclick="img_rightTom();">;&nbsp;ki:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/kick.png" onclick="img_kick();">;&nbsp;cr:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/crash.png" onclick="img_crash();"><br>
+                            <span class="span_lineNo" id="4">4&nbsp;&nbsp;&nbsp;&nbsp;</span>rhy:Represent a beat.(short for rhythm)&nbsp;&nbsp;<span class="span_KeyofRHY span_text_hover">RHY&nbsp;</span><br/>
+                            <span class="span_lineNo" id="5">5&nbsp;&nbsp;&nbsp;&nbsp;</span>sn:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/snare.png" onclick="img_snare();">;&nbsp;fl:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/floor_tom.png" onclick="img_floorTom();">;&nbsp;hi:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/hi_hat.png" onclick="img_hihat();">;&nbsp;bi:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/left_tom.png" onclick="img_leftTom();">;&nbsp;sm:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/right_tom.png" onclick="img_rightTom();">;&nbsp;ki:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/kick.png" onclick="img_kick();">;&nbsp;cr:<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/crash.png" onclick="img_crash();"><br>
+                            <span class="span_lineNo" id="6">6&nbsp;&nbsp;&nbsp;&nbsp;</span>also you can use the word "hop" to skip a beat.&nbsp;&nbsp; the symbol just like<img class="" style="height: 30px;width: 30px" src="<%=request.getContextPath()%>/assets/images/proimage/hop.png"><br/>
                        </div>
                 </div>
             </div>
@@ -540,7 +541,7 @@
                     </div>
                     <div class="col-md-12">
                         <%--<a href="<pro:url value="/textarea/commit"/>" style="background: #fe832f;">--%>
-                        <a href="javascript:void(0)" class="demo0 wobble" style="background: #fe832f;">
+                        <a href="javascript:void(0)" class="demo0 wobble" style="background: #fe832f;" onclick="showCommit();">
                             Submit
                         </a>
                     </div>
@@ -582,7 +583,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/js/commit/css/animate.css"/> <!-- 动画效果 -->
 <%--<link rel="stylesheet" href="<%=request.getContextPath()%>/assets/js/commit/css/common.css"/><!-- 页面基本样式 -->--%>
 
-<div id="HBox" >
+<div id="HBox" style="visibility: hidden">
     <form id="form1" action="<pro:url value="/textarea/commit"/>" method="post" onsubmit="return false;" style="background-image: url('<%=request.getContextPath()%>/assets/images/slider/music-bg3.jpg')">
         <ul class="prolist">
             <li>
@@ -598,13 +599,21 @@
                 <strong style="color: #0b0b0b"> <font color="#ffcb2a">&nbsp;Description</font></strong>
                 <div class="fl"><input type="text" name="description" value="" class="description"/></div>
             </li>
+            <li>
+                <strong style="color: #0b0b0b"> <font color="#ffcb2a">&nbsp;Author</font></strong>
+                <div class="fl"><input type="text" name="auther" value="anonymity" class="auther"/></div>
+            </li>
             <li style="display: none"><textarea name="code" id="code"></textarea></li>
             <li><input type="submit" value="Submit" class="submitBtn"/></li>
         </ul>
     </form>
 </div><!-- HBox end -->
-<script src="<%=request.getContextPath()%>/assets/js/commit/js/jquery.hDialog.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/commit/js/jquery.hDialog.js" charset="UTF-8"></script>
 <script>
+    function showCommit(){
+        var s=document.getElementById("HBox");
+        s.style.visibility="visible";
+    }
     $(function(){
         var $el = $('.dialog');
         $el.hDialog(); //默认调用
@@ -628,7 +637,7 @@
         // $('#autoShow').hDialog({title:'????',autoShow: true});
 
         //带标题的
-        $('.demo0').hDialog({title: 'Submit',height: 300});
+        $('.demo0').hDialog({title: 'Submit',height: 300,closeHide:false});
 
 
     });
