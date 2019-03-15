@@ -3,6 +3,7 @@ package com.promusician.service;
 import com.promusician.model.Code;
 import com.promusician.stone.BasicParser;
 import com.promusician.stone.InterpreterRunner;
+import com.promusician.stone.ast.RhyStmnt;
 import com.promusician.stone.env.BasicEnv;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,8 @@ public class RunnerServiceImpl implements RunnerService {
         Code code = InterpreterRunner.runCode(new BasicParser(), new BasicEnv(), str);
 //        logger.debug("{}",code.getStrings());
         //是否进行code.ArrayList<String>的进一步处理？
-
+        //处理完成后需要把static还原
+        RhyStmnt.loop_time=0;
         return code;
     }
 }

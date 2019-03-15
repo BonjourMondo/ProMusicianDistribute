@@ -92,7 +92,7 @@ public class TextareaController {
     @RequestMapping(value = "/start",method = RequestMethod.POST)
     public void getRunnerText(HttpServletRequest request,HttpServletResponse response) throws Exception {
         String s=request.getParameter("str");
-//        logger.debug("试运行代码中...{}",s);
+        logger.debug("试运行代码中...length:{}",s.length());
         if (StringUtils.isEmpty(s)){
             throw new Exception("传值空异常");
         }

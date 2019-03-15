@@ -83,7 +83,7 @@
                 dataType: "json",
                 success: function(data){
                     //调用乐器打击代码
-//                    alert("s");
+                   // alert(data.code);
                     var instruments=data.code.split(",");
                     var bpm=60000/data.bpm;
                     if(data.error_code=="success"){
