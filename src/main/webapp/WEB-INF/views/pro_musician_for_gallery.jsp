@@ -52,6 +52,12 @@
     <%--<script src="<%=request.getContextPath()%>/assets/js/myjs/drumbeat.js"></script>--%>
     <!--弹窗的alert-->
     <script src="<%=request.getContextPath()%>/assets/js/myjs/alert.js"></script>
+
+    <!--评论相关-->
+    <script src="<%=request.getContextPath()%>/assets/comment_js/jquery.min.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/comment_js/data.js"></script>
+    <script src="<%=request.getContextPath()%>/assets/comment_js/index.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/comment_js/comment_css.css"/>
 <script>
     //        /textarea/start
     function CheckAndRun(){
@@ -373,7 +379,7 @@
             <span style="margin-right: 100px">enjoy the music</span>
         </div>
         <div class="row" >
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class='box box1'>
                     <div class="scroll textHint span_all"
                          style="overflow: scroll"
@@ -391,22 +397,89 @@
                     >${template_promusician}</textarea>
                 </form>
             </div>
-            <div class="probutton col-md-2" >
+            <div class="probutton col-md-4" >
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <%--pro_close();CheckAndRun()--%>
-                        <a href="javascript:void(0)" style="background: #fe942f;">
+                            <%--<a href="/user/test/xxxx.txt" download="文件名.txt">点击下载</a>--%>
+                        <a href="<%=request.getContextPath()%>/data/lex.stone" download="lex.stone" style="background: #fecc2f;; height: 50px;width: 100px">
 
-                            Follow
+                            Download
                         </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <%--pro_close();CheckAndRun()--%>
-                        <a href="javascript:void(0)" style="background: #fe942f;" onclick="CheckAndRun();">
+                        <a href="javascript:void(0)" onclick="barrage_click();" style="background: #feb52f; height: 50px;width: 100px" id="comment_manage">
+
+                            Barraget/Off
+                        </a>
+                    </div>
+                    <script type="text/javascript">
+
+                        // 数据初始化
+                        var Obj = $('body').barrage({
+                            data : data, //数据列表
+                            row : 5,   //显示行数
+                            time : 2500, //间隔时间
+                            gap : 20,    //每一个的间隙
+                            position : 'fixed', //绝对定位
+                            direction : 'bottom right', //方向
+                            ismoseoverclose : true, //悬浮是否停止
+                            height : 30, //设置单个div的高度
+                        })
+                        Obj.start();
+
+                        //添加评论
+                        function submit_barraget(){
+                            var val = $("#barrage_content").val();
+                            //此格式与dataa.js的数据格式必须一致
+                            var addVal = {
+                                href : '',
+                                text : val
+                            }
+                            //添加进数组
+                            Obj.data.unshift(addVal);
+                            alert('评论成功');
+                        }
+
+                        // $("").click(function(){
+                        //     Obj.start();
+                        // })
+                        let boolean_comment=true;
+                        function barrage_click() {
+                            if(boolean_comment) {
+                                Obj.close();
+                                // document.getElementById("comment_manage").innerText
+                                $("#comment_manage").text("Barraget/On");
+                                boolean_comment=false;
+                            }
+                            else{
+                                Obj.start();
+                                $("#comment_manage").text("Barraget/Off");
+                                boolean_comment=true;
+                            }
+                        }
+
+                    </script>
+                    <div class="col-md-4">
+                        <%--pro_close();CheckAndRun()--%>
+                        <a href="javascript:void(0)" style="background: #feab2f; height: 50px;width: 100px" onclick="CheckAndRun();">
 
                             Start
                         </a>
                     </div>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-md-10">
+                    <input type="text" style="width: 100%" class="form-control" name="" id="barrage_content" placeholder="Add barraget content...">
+                    </div>
+                    <div class="col-md-2" style="margin-left: 0px;margin-top:0px;padding-left: 0px; padding-top: 0px;">
+                        <a href="javascript:void(0)" onclick="submit_barraget();" style="background: #fe942f; height: 35px;width: 60px; margin-left: 0px;margin-top:0px;padding-left: 0px; padding-top: 0px;" id="submit_barraget">
+
+                            Send
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>

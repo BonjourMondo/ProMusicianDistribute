@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -96,5 +97,10 @@ public class HomeController {
         String analyseCode = analyserService.analyseInputText(request.getContextPath(),analyse_text);
         model.addAttribute("analyseCode",analyseCode);
         return "pro_musician_for_gallery";
+    }
+
+    @RequestMapping("/test")
+    public void test(ModelAndView modelAndView){
+        modelAndView.setViewName("test");
     }
 }

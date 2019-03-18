@@ -92,7 +92,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-trainer trainer_s_three">
                     <div class="thumb">
-                        <img src="${music.img_url}" alt="image" onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>') >
+                        <img style="width: 330px; height: 500px" src="${music.img_url}" alt="image" onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>') >
                     </div>
                     <div class="content">
                         <h4 onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>')>${music.title}</h4>
