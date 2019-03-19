@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="<%=request.getContextPath()%>/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .h-hover:hover{
+
+            color: #ffcb2a;
+            background-color: #ffcb2a;
+
+        }
+    </style>
 </head>
 
 
@@ -88,34 +96,40 @@
             <h2>Our Production</h2>
         </div>
         <div class="row">
+            <script>
+                function activator(v) {
+                    if (v.className.indexOf('active') == -1) {
+                        v.classList.add("active");
+                    }else{
+                        v.classList.remove("active");
+                    }
+                }
+                function mouseover(v) {
+                    v.classList.add("active");
+                }
+                function mouseout(v) {
+                    v.classList.remove("active");
+                }
+            </script>
 <c:forEach var="music"   items="${gallery}"   varStatus="status"  >
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-3 col-md-3" style="margin-top: 10px">
                 <div class="single-trainer trainer_s_three">
-                    <div class="thumb">
-                        <img style="width: 330px; height: 500px" src="${music.img_url}" alt="image" onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>') >
+                    <div class="thumb" style="width: 300px; height: 400px">
+                        <img  src="${music.img_url}" alt="image" onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>') >
                     </div>
-                    <div class="content">
-                        <h4 onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>')>${music.title}</h4>
-                        <p onclick=window.open('<pro:url value="/visitor?path=${music.file_url}"/>')>${music.description}</p>
+                    <div class="content" style="height: 200px;width: 300px" >
+                        <h4 class="h-hover" onclick=window.open('<pro:url value="/visitor?id=${music.id}"/>') style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden; margin-right:20px">${music.title}</h4>
+                        <p class="h-hover" onclick=window.open('<pro:url value="/visitor?id=${music.id}"/>') style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden; margin-right:20px">${music.description}</p>
                         <ul class="social">
                             <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook"></i>
+                                <a href="javascript:void(0)" onclick="activator(this)">
+                                    <i class="fa fa-facebook">ollow</i> <i style="font-size: 10px;margin-left: 20px">LeesangHyuk</i>
                                 </a>
                             </li>
+                            <br>
                             <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-dribbble"></i>
+                                <a href="javascript:void(0)" style="margin-left: 150px;font-size: 10px">
+                                     ${music.datetime}
                                 </a>
                             </li>
                         </ul>

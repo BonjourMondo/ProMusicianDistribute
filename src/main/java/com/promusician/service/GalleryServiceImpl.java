@@ -1,5 +1,6 @@
 package com.promusician.service;
 
+import com.promusician.mapper.GalleryItemMapper;
 import com.promusician.mapper.GalleryShowMapper;
 import com.promusician.model.GalleryDTO;
 import com.promusician.model.Music;
@@ -20,11 +21,19 @@ public class GalleryServiceImpl implements GalleryService{
 
     @Autowired
     GalleryShowMapper galleryShowMapper;
+    @Autowired
+    GalleryItemMapper galleryItemMapper;
 
     @Override
     @Cacheable("MusicAllSelect")
     public List<GalleryDTO> showGallery(){
         List<GalleryDTO> galleryDTOList= galleryShowMapper.selectAllMusic();
         return galleryDTOList;
+    }
+
+    @Override
+    @Cacheable("MusicOneSelect")
+    public GalleryDTO getGalleryDTO(int id) {
+        return galleryItemMapper.selectMusic(id);
     }
 }

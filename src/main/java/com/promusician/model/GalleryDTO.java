@@ -15,6 +15,15 @@ public class GalleryDTO implements Serializable{
     private String description;
     private String file_url;
     private String img_url;
+    private String datetime;
+
+    public String getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
+    }
 
     public Integer getId() {
         return id;

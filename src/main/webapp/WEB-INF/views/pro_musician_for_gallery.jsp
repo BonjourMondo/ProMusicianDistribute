@@ -376,14 +376,13 @@
 <div class="contact-area bg_dark ptb--100" style="background: url(<%=request.getContextPath()%>/assets/images/slider/mohu_bpm.jpg) center/cover no-repeat;">
     <div class="container" >
         <div class="msc-title section-title">
-            <span style="margin-right: 100px">enjoy the music</span>
+            <span style="font-size: 20px;">${title}</span> LeesangHyuk  Created at:${datetime}
         </div>
         <div class="row" >
             <div class="col-md-6">
                 <div class='box box1'>
                     <div class="scroll textHint span_all"
-                         style="overflow: scroll"
-                         id="scrollOne" scrolling="yes"
+                         id="scrollOne"
                     >
                         ${analyseCode}
                     </div>

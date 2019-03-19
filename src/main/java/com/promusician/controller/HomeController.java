@@ -34,6 +34,7 @@ public class HomeController {
     @Qualifier("galleryservice")
     private GalleryService galleryService;
 
+
     @RequestMapping(method = RequestMethod.GET)
     public String home(Model model){
         model.addAttribute("message","Bounjour Mondo!");
@@ -70,7 +71,12 @@ public class HomeController {
     }
 
     @RequestMapping("/visitor")
-    public String visitor(HttpServletRequest request, Model model, @RequestParam(value = "path",defaultValue = "data/lex.stone") String path){
+    public String visitor(HttpServletRequest request, Model model, @RequestParam(value = "id") int id){
+        GalleryDTO galleryDTO=galleryService.getGalleryDTO(id);
+        model.addAttribute("title",galleryDTO.getTitle());
+        model.addAttribute("description",galleryDTO.getDescription());
+        model.addAttribute("datetime",galleryDTO.getDatetime());
+        String path=galleryDTO.getFile_url();
         //相对路径
         String text="";
         try {

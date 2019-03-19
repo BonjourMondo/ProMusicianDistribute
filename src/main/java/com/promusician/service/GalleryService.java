@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface GalleryService {
     public List<GalleryDTO> showGallery();
+
+    public GalleryDTO getGalleryDTO(int id);
 }
