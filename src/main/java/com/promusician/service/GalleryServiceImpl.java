@@ -25,14 +25,14 @@ public class GalleryServiceImpl implements GalleryService{
     GalleryItemMapper galleryItemMapper;
 
     @Override
-    @Cacheable("MusicAllSelect")
+//    @Cacheable("MusicSelect")
     public List<GalleryDTO> showGallery(){
         List<GalleryDTO> galleryDTOList= galleryShowMapper.selectAllMusic();
         return galleryDTOList;
     }
 
     @Override
-    @Cacheable("MusicOneSelect")
+//    @Cacheable("MusicSelect")
     public GalleryDTO getGalleryDTO(int id) {
         return galleryItemMapper.selectMusic(id);
     }
